@@ -3,8 +3,116 @@
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
   android:id="@+id/main"
+  android:background="@drawable/bg_gradient"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   tools:context=".CalculatorActivity">
+
+  <TextView
+    android:id="@+id/textGasPrice"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginTop="16dp"
+    android:text="Preço do Combustível"
+    android:textColor="@color/white"
+    android:textSize="24sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/textInputGasPrice"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginHorizontal="16dp"
+    android:hint="Ex: 1.70"
+    app:hintTextColor="@color/white"
+    app:hintAnimationEnabled="false"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textGasPrice">
+    <com.google.android.material.textfield.TextInputEditText
+      android:id="@+id/editTextGasPrice"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:inputType="numberDecimal"/>
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <TextView
+    android:id="@+id/textCarFuelConsumption"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_marginHorizontal="16dp"
+    android:text="Consumo do Carro"
+    android:textColor="@color/white"
+    android:textSize="24sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textInputGasPrice" />
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/textInputCarFuelConsumption"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginHorizontal="16dp"
+    android:hint="Ex: 5.0 km/l"
+    app:hintAnimationEnabled="false"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textCarFuelConsumption">
+    <com.google.android.material.textfield.TextInputEditText
+      android:id="@+id/editTextCarFuelConsumption"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:inputType="numberDecimal"/>
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <TextView
+    android:id="@+id/textDistance"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_marginHorizontal="16dp"
+    android:text="Distancia até o Destino"
+    android:textColor="@color/white"
+    android:textSize="24sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textInputCarFuelConsumption" />
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/textInputDistance"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginHorizontal="16dp"
+    android:hint="Ex: 5.0 km/l"
+    app:hintTextColor="@color/white"
+    app:hintAnimationEnabled="false"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textDistance">
+    <com.google.android.material.textfield.TextInputEditText
+      android:id="@+id/editTextDistance"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:inputType="numberDecimal"/>
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <Button
+    android:id="@+id/buttonCalculate"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginBottom="16dp"
+    android:text="Calcular"
+    android:backgroundTint="@color/primary_900"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

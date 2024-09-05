@@ -5,15 +5,44 @@
   android:id="@+id/main"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
+  android:background="@drawable/bg_gradient"
   tools:context=".MainActivity">
 
-  <TextView
+  <ImageView
+    android:id="@+id/image_fuel_logo"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Hello World!"
-    app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_marginTop="46dp"
+    android:layout_marginHorizontal="16dp"
+    android:src="@drawable/logo"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+    android:id="@+id/text_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginTop="24dp"
+    android:text="Não tem ideia de quanto vai gastar de gasolina na sua viagem ? Então está no lugar certo"
+    android:textColor="@color/white"
+    android:textSize="16sp"
+    android:textAlignment="center"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/image_fuel_logo" />
+
+  <Button
+    android:id="@+id/buttonNext"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginBottom="16dp"
+    android:text="Iniciar"
+    android:backgroundTint="@color/primary_900"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
